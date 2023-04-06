@@ -1,0 +1,5 @@
+# apt-get install python3-tk
+tk
+# sudo apt-get install python3-pil python3-pil.imagetk
+pillow
+pandas
