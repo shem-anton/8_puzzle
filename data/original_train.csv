@@ -1,4 +1,4 @@
-Unnamed: 0,image_paths,labels
+,image_paths,labels
 0,images/0.png,5
 1,images/1.png,0
 2,images/2.png,4
@@ -210,6 +210,7 @@ Unnamed: 0,image_paths,labels
 208,images/208.png,1
 209,images/209.png,0
 210,images/210.png,0
+211,images/211.png,1
 212,images/212.png,7
 213,images/213.png,2
 214,images/214.png,7
@@ -529,6 +530,7 @@ Unnamed: 0,image_paths,labels
 528,images/528.png,8
 529,images/529.png,9
 530,images/530.png,2
+531,images/531.png,4
 532,images/532.png,8
 533,images/533.png,1
 534,images/534.png,6
@@ -701,6 +703,7 @@ Unnamed: 0,image_paths,labels
 701,images/701.png,6
 702,images/702.png,0
 703,images/703.png,7
+704,images/704.png,9
 705,images/705.png,8
 706,images/706.png,4
 707,images/707.png,9
@@ -845,6 +848,7 @@ Unnamed: 0,image_paths,labels
 846,images/846.png,6
 847,images/847.png,4
 848,images/848.png,4
+849,images/849.png,0
 850,images/850.png,4
 851,images/851.png,4
 852,images/852.png,6
@@ -1577,6 +1581,7 @@ Unnamed: 0,image_paths,labels
 1579,images/1579.png,1
 1580,images/1580.png,4
 1581,images/1581.png,3
+1582,images/1582.png,6
 1583,images/1583.png,3
 1584,images/1584.png,2
 1585,images/1585.png,9
@@ -1956,6 +1961,7 @@ Unnamed: 0,image_paths,labels
 1959,images/1959.png,3
 1960,images/1960.png,9
 1961,images/1961.png,5
+1962,images/1962.png,9
 1963,images/1963.png,0
 1964,images/1964.png,8
 1965,images/1965.png,5
@@ -2421,6 +2427,7 @@ Unnamed: 0,image_paths,labels
 2425,images/2425.png,8
 2426,images/2426.png,1
 2427,images/2427.png,7
+2428,images/2428.png,5
 2429,images/2429.png,1
 2430,images/2430.png,3
 2431,images/2431.png,7
@@ -2901,6 +2908,7 @@ Unnamed: 0,image_paths,labels
 2906,images/2906.png,1
 2907,images/2907.png,1
 2908,images/2908.png,2
+2909,images/2909.png,7
 2910,images/2910.png,6
 2911,images/2911.png,9
 2912,images/2912.png,5
@@ -3669,6 +3677,7 @@ Unnamed: 0,image_paths,labels
 3675,images/3675.png,1
 3676,images/3676.png,2
 3677,images/3677.png,0
+3678,images/3678.png,9
 3679,images/3679.png,2
 3680,images/3680.png,2
 3681,images/3681.png,5
@@ -4025,6 +4034,7 @@ Unnamed: 0,image_paths,labels
 4032,images/4032.png,9
 4033,images/4033.png,3
 4034,images/4034.png,7
+4035,images/4035.png,4
 4036,images/4036.png,8
 4037,images/4037.png,5
 4038,images/4038.png,4
@@ -4374,6 +4384,7 @@ Unnamed: 0,image_paths,labels
 4382,images/4382.png,4
 4383,images/4383.png,8
 4384,images/4384.png,8
+4385,images/4385.png,7
 4386,images/4386.png,4
 4387,images/4387.png,1
 4388,images/4388.png,8
@@ -5834,6 +5845,7 @@ Unnamed: 0,image_paths,labels
 5843,images/5843.png,2
 5844,images/5844.png,0
 5845,images/5845.png,2
+5846,images/5846.png,6
 5847,images/5847.png,5
 5848,images/5848.png,6
 5849,images/5849.png,6
@@ -5970,6 +5982,7 @@ Unnamed: 0,image_paths,labels
 5980,images/5980.png,3
 5981,images/5981.png,0
 5982,images/5982.png,4
+5983,images/5983.png,1
 5984,images/5984.png,5
 5985,images/5985.png,2
 5986,images/5986.png,7
@@ -6245,6 +6258,7 @@ Unnamed: 0,image_paths,labels
 6256,images/6256.png,4
 6257,images/6257.png,6
 6258,images/6258.png,4
+6259,images/6259.png,7
 6260,images/6260.png,4
 6261,images/6261.png,8
 6262,images/6262.png,1
@@ -6881,6 +6895,7 @@ Unnamed: 0,image_paths,labels
 6893,images/6893.png,9
 6894,images/6894.png,3
 6895,images/6895.png,6
+6896,images/6896.png,8
 6897,images/6897.png,8
 6898,images/6898.png,3
 6899,images/6899.png,2
@@ -7032,6 +7047,7 @@ Unnamed: 0,image_paths,labels
 7045,images/7045.png,4
 7046,images/7046.png,3
 7047,images/7047.png,5
+7048,images/7048.png,8
 7049,images/7049.png,6
 7050,images/7050.png,0
 7051,images/7051.png,8
@@ -7079,6 +7095,7 @@ Unnamed: 0,image_paths,labels
 7093,images/7093.png,2
 7094,images/7094.png,9
 7095,images/7095.png,6
+7096,images/7096.png,6
 7097,images/7097.png,3
 7098,images/7098.png,9
 7099,images/7099.png,7
@@ -7698,6 +7715,7 @@ Unnamed: 0,image_paths,labels
 7713,images/7713.png,9
 7714,images/7714.png,9
 7715,images/7715.png,6
+7716,images/7716.png,1
 7717,images/7717.png,6
 7718,images/7718.png,6
 7719,images/7719.png,2
@@ -7972,6 +7990,7 @@ Unnamed: 0,image_paths,labels
 7988,images/7988.png,5
 7989,images/7989.png,5
 7990,images/7990.png,6
+7991,images/7991.png,6
 7992,images/7992.png,7
 7993,images/7993.png,1
 7994,images/7994.png,7
@@ -8037,6 +8056,7 @@ Unnamed: 0,image_paths,labels
 8054,images/8054.png,3
 8055,images/8055.png,3
 8056,images/8056.png,5
+8057,images/8057.png,6
 8058,images/8058.png,2
 8059,images/8059.png,9
 8060,images/8060.png,9
@@ -8414,6 +8434,7 @@ Unnamed: 0,image_paths,labels
 8432,images/8432.png,8
 8433,images/8433.png,2
 8434,images/8434.png,5
+8435,images/8435.png,5
 8436,images/8436.png,7
 8437,images/8437.png,7
 8438,images/8438.png,4
@@ -9087,6 +9108,7 @@ Unnamed: 0,image_paths,labels
 9106,images/9106.png,1
 9107,images/9107.png,3
 9108,images/9108.png,4
+9109,images/9109.png,4
 9110,images/9110.png,1
 9111,images/9111.png,5
 9112,images/9112.png,8
@@ -9521,6 +9543,7 @@ Unnamed: 0,image_paths,labels
 9541,images/9541.png,4
 9542,images/9542.png,2
 9543,images/9543.png,8
+9544,images/9544.png,0
 9545,images/9545.png,7
 9546,images/9546.png,2
 9547,images/9547.png,4
@@ -9695,6 +9718,7 @@ Unnamed: 0,image_paths,labels
 9716,images/9716.png,7
 9717,images/9717.png,0
 9718,images/9718.png,4
+9719,images/9719.png,6
 9720,images/9720.png,0
 9721,images/9721.png,2
 9722,images/9722.png,2
@@ -28254,6 +28278,7 @@ Unnamed: 0,image_paths,labels
 28276,images/28276.png,3
 28277,images/28277.png,5
 28278,images/28278.png,2
+28279,images/28279.png,9
 28280,images/28280.png,5
 28281,images/28281.png,6
 28282,images/28282.png,2
