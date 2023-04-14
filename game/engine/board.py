@@ -1,6 +1,8 @@
 import tkinter as tk
 import random
+from typing import Callable
 
+import numpy as np
 import pandas as pd
 
 from engine.tile import Tile
@@ -9,23 +11,28 @@ IMAGES_CSV = "data/test.csv"
 
 
 class Board:
-    """The tkinter window representing a gaming board of 9 tiles.
+    """The tkinter Frame representing a gaming board of 9 tiles.
 
     On initialization creates a random solvable board. Pressing on a tile next
     to empty tile will swap the tile with empty tile. The goal is to align all
     tiles in order from 1 to 8 with empty tile in the bottom right corner.
+
+    Args:
+      window: Parent tkinter window for the board frame.
+      solve_callback: function, that will be called when the puzzle is solved.
+      move_callback: function, that will be called when the move is made.
     """
 
-    def __init__(self):
-        self.window = tk.Tk()
-        self.window.wm_title("Game of 8")
+    def __init__(self, window: tk.Tk, solve_callback: Callable, 
+                 move_callback: Callable):
+        self.frame = tk.Frame(window)
+        self.solve_callback = solve_callback
+        self.move_callback = move_callback
 
-        self.tiles = self.initialize_tiles(self.window)
+        self.tiles = self.initialize_tiles()
         self._draw_buttons()
 
-        self.window.mainloop()
-
-    def initialize_tiles(self, window: tk.Tk) -> list[list[Tile]]:
+    def initialize_tiles(self) -> list[list[Tile]]:
         """Initialize the matrix of board tiles.
 
         Args:
@@ -44,16 +51,24 @@ class Board:
 
                 if value == 0:
                     # 0 encodes an empty tile
-                    tiles[i][j] = Tile(window=window,
+                    tiles[i][j] = Tile(window=self.frame,
                                        value=value,
                                        image_file=None)
                     self.empty = (i, j)
                 else:
                     filename = self._pick_image(value)
-                    tiles[i][j] = Tile(window=window,
+                    tiles[i][j] = Tile(window=self.frame,
                                        value=value,
                                        image_file=filename)
         return tiles
+
+    def get_tile_images(self) -> list[np.ndarray]:
+        """Get the tile images flattened in a list."""
+        images = []
+        for i in range(3):
+            for j in range(3):
+                images.append(self.tiles[i][j].get_image())
+        return images
 
     def _draw_buttons(self) -> None:
         """Display the buttons according to tile matrix and set listeners."""
@@ -62,9 +77,10 @@ class Board:
                 self.tiles[i][j].button.grid(row=i, column=j)
                 self.tiles[i][j].button.configure(
                     command= lambda x=i, y=j: self._press_tile(x, y))
+        self.move_callback()
 
         if self._is_solved():
-            self.window.destroy()
+            self.solve_callback()
 
     def _pick_image(self, number: int) -> str:
         """Randomly selects an image of given digit from MNIST test set.
@@ -97,8 +113,7 @@ class Board:
                 self.tiles[i][j], self.tiles[self.empty[0]][self.empty[1]]
 
             self.empty = (i, j)
-
-        self._draw_buttons()
+            self._draw_buttons()
 
     def _is_solved(self) -> bool:
         """Check if the board is in solved state.

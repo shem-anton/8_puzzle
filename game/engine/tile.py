@@ -1,3 +1,4 @@
+import numpy as np
 import tkinter as tk
 
 from PIL import Image, ImageTk
@@ -25,16 +26,29 @@ class Tile:
         self.value = value
         if self.value == 0:
             image = Image.new('L', (TILE_SIZE, TILE_SIZE), 255)
-            self.image = ImageTk.PhotoImage(image)
-            self.button = tk.Button(window,
-                                    image=self.image,
-                                    borderwidth=0,
-                                    state="disabled")
+            state = "disabled"
         else:
-            self.image = self._load_button_image(image_file)
-            self.button = tk.Button(window, image=self.image, borderwidth=0)
+            image = self._load_button_image(image_file)
+            state = "active"
 
-    def _load_button_image(self, filename: str) -> tk.PhotoImage:
+        self.numpy_image = np.array(image)
+        self.image = ImageTk.PhotoImage(image)
+        self.button = tk.Button(window,
+                                image=self.image,
+                                borderwidth=0,
+                                state=state)
+
+        self.button = tk.Button(window, image=self.image, borderwidth=0)
+
+    def get_image(self) -> np.ndarray:
+        """Return the image in numpy format for easier model training.
+        
+        Returns:
+          The tile image represented as a two dimensional numpy array.
+        """
+        return self.numpy_image
+
+    def _load_button_image(self, filename: str) -> Image:
         """Load image from the disc as tkinter image object.
 
         MNIST images are white on black. To look better to user images are 
@@ -44,4 +58,4 @@ class Tile:
         image = image.resize((TILE_SIZE, TILE_SIZE))
 
         image = PIL.ImageOps.invert(image)
-        return ImageTk.PhotoImage(image)
+        return image
